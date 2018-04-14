@@ -2,6 +2,7 @@
 package com.mycompany.ejercicioapigithub;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import javax.swing.JOptionPane;
 import org.eclipse.jgit.api.errors.GitAPIException;
 
@@ -58,6 +59,15 @@ public class Menu {
                 break;
                 
             case 5:
+            try {
+                Metodos.hacerPush();
+            } catch (IOException ex) {
+               System.out.println("ERRO!"+ex.getMessage());
+            } catch (GitAPIException ex) {
+                 System.out.println("ERRO!"+ex.getMessage());
+            } catch (URISyntaxException ex) {
+                System.out.println("ERRO!"+ex.getMessage());
+            }
                 
                 break;
                 
