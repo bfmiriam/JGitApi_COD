@@ -74,7 +74,7 @@ public class Metodos {
         String contraseña = JOptionPane.showInputDialog("Introduce contraseña de GitHub");
         
          FileRepositoryBuilder constructorRepositorio = new FileRepositoryBuilder();
-        Repository repositorio = constructorRepositorio.setGitDir(new File(ruta))
+        Repository repositorio = constructorRepositorio.setGitDir(new File(ruta+".git"))
                 .readEnvironment() 
                 .findGitDir() 
                 .setMustExist(true)
