@@ -47,6 +47,13 @@ public class Menu {
                 break;
                 
             case 4: 
+                 try {
+                Metodos.crearCommit();
+            } catch (IOException ex) {
+                System.out.println("ERRO!"+ex.getMessage());
+            } catch (GitAPIException ex) {
+             System.out.println("ERRO"+ex.getMessage());
+            }
            
                 break;
                 
