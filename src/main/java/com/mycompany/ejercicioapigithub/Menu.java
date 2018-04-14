@@ -38,6 +38,11 @@ public class Menu {
                 break;
                 
             case 3: 
+                try {
+                Metodos.inicializarRepositorio();
+            } catch (GitAPIException ex) {
+                System.out.println("ERRO!"+ex.getMessage());
+            }
             
                 break;
                 
