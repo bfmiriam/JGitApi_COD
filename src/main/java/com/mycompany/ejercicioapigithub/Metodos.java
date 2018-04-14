@@ -1,8 +1,11 @@
 
 package com.mycompany.ejercicioapigithub;
 
+import java.io.File;
 import java.io.IOException;
 import javax.swing.JOptionPane;
+import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.errors.GitAPIException;
 import org.kohsuke.github.GHCreateRepositoryBuilder;
 import org.kohsuke.github.GitHub;
 
@@ -18,5 +21,14 @@ public class Metodos {
         builder = github.createRepository(nombre);
         builder.create();
     }
-    
+    public static void clonar() throws GitAPIException {
+     
+     String repo = JOptionPane.showInputDialog("Indique el repositorio del proyecto");
+     String ruta = JOptionPane.showInputDialog("Indique la ruta de la carpeta"); 
+     
+        Git.cloneRepository()
+                .setURI(repo)
+                .setDirectory(new File(ruta))
+                .call();
+    }
 }

@@ -3,6 +3,7 @@ package com.mycompany.ejercicioapigithub;
 
 import java.io.IOException;
 import javax.swing.JOptionPane;
+import org.eclipse.jgit.api.errors.GitAPIException;
 
 
 public class Menu {
@@ -28,7 +29,11 @@ public class Menu {
             }
                 break;
                 
-            case 2:     
+            case 2: try {
+                Metodos.clonar();
+            } catch (GitAPIException ex) {
+                System.out.println("ERRO!"+ex.getMessage());
+            }    
             
                 break;
                 
