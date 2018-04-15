@@ -5,10 +5,17 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import javax.swing.JOptionPane;
 import org.eclipse.jgit.api.errors.GitAPIException;
-
+/**
+ * Esta clase contiene el metodo que nos permite visualizar un menu de opciones
+ * para el proyecto
+ * @author mbacelofernandez
+ */
 
 public class Menu {
-    
+    /**
+     * Este metodo nos muestra un menu donde aparecen todas las funciones del proyecto,
+     * a escoger la que deseas, hasta que desees cerrar el programa
+     */
      public void escogerMenu(){
         int op;
         
